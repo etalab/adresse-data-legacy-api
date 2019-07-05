@@ -1,0 +1,33 @@
+{
+  "name": "@etalab/adresse-data-legacy-api",
+  "version": "0.0.0",
+  "description": "API permettant d'accéder aux données Adresse \"comment avant\"",
+  "main": "index.js",
+  "repository": "https://github.com/etalab/adresse-data-legacy-api",
+  "author": "Jérôme Desboeufs <jerome.desboeufs@data.gouv.fr>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node server",
+    "lint": "xo"
+  },
+  "dependencies": {
+    "@etalab/decoupage-administratif": "^0.6.2",
+    "content-disposition": "^0.5.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "pumpify": "^2.0.0",
+    "yazl": "^2.5.1"
+  },
+  "devDependencies": {
+    "xo": "^0.24.0"
+  },
+  "xo": {
+    "semicolon": false,
+    "space": 2
+  },
+  "engines": {
+    "node": ">= 10"
+  }
+}
