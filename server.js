@@ -35,7 +35,7 @@ app.get('/data/ban-v0/BAN_licence_gratuite_repartage.zip', (req, res) => {
   zip.end()
 })
 
-app.get('/ban-v0/BAN_licence_gratuite_repartage_:departement.zip', (req, res) => {
+app.get('/data/ban-v0/BAN_licence_gratuite_repartage_:departement.zip', (req, res) => {
   const {departement} = req.params
   const zip = new ZipFile()
   zip.addReadStream(getFileStream(departement), `BAN_licence_gratuite_repartage_${departement}.csv`)
