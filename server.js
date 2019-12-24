@@ -45,4 +45,11 @@ app.get('/data/ban-v0/BAN_licence_gratuite_repartage_:departement.zip', (req, re
   zip.end()
 })
 
+app.get('/data/ban/adresses/latest/csv/adresses-france.csv', (req, res) => {
+  res.type('csv')
+  createReadStream(join(ADRESSE_DATA_PATH, 'adresses-france.csv.gz'))
+    .pipe(createGunzip())
+    .pipe(res)
+})
+
 app.listen(process.env.PORT || 5000)
